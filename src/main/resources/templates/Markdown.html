@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="utf-8" />
+    <title>Simple example - Editor.md examples</title>
+    <link rel="stylesheet" href="/editormd/css/style.css" />
+    <link rel="stylesheet" href="/editormd/css/editormd.css" />
+    <link rel="shortcut icon" href="https://pandao.github.io/editor.md/favicon.ico" type="image/x-icon" />
+</head>
+<body>
+<div id="layout">
+    <header>
+        <h1>Markdown</h1>
+    </header>
+
+    </div>
+</div>
+
+<script src="/editormd/js/jquery.min.js"></script>
+<script src="/editormd/editormd.min.js"></script>
+<form name="mdEditorForm">
+    <div id= "testeditormd">
+            <textarea name="text" id="text" style="display:none">
+
+            </textarea>
+    </div>
+
+</form>
+<script type="text/javascript">
+
+    var testEditor;
+    function contentCommit(){
+        mdEditorForm.method = "post";
+        mdEditorForm.action = "addText";//提交至服务器的路径
+        mdEditorForm.submit();
+    }
+    $(function() {
+        testEditor = editormd("testeditormd", {
+            width   : "90%",
+            height  : 640,
+            syncScrolling : "single",
+            path    : "/editormd/lib/",
+            toolbarIcons:function(){
+                return ["undo", "redo", "|","bold", "italic","ucwords","uppercase","lowercase","|","h1","h2","h3","h4","h5","h6","|","list-ul","list-ol","table","datetime","hr",  "||",  "watch", "fullscreen", "preview", "releaseIcon", "index"];
+            },
+            /*自定义功能按钮，下面我自定义了2个，一个是发布，一个是返回首页*/
+            toolbarIconTexts : {
+                releaseIcon : "<span bgcolor=\"gray\">发布</span>",
+                index : "<span bgcolor=\"red\">返回首页</span>",
+            },
+
+            /*给自定义按钮指定回调函数*/
+            toolbarHandlers:{
+                releaseIcon : function(cm, icon, cursor, selection) {
+                    contentCommit();//提交表单代码在下面
+
+                },
+                index : function(){
+                    window.location.href = '/user/users';
+                },
+            }
+
+        });
+
+
+    });
+</script>
+
+</body>
+</html>
