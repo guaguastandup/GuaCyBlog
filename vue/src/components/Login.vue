@@ -1,10 +1,10 @@
 <template>
   <div>
-    �û���:<input type="text" v-model="loginForm.username" placeholder="�������û���"/>
+    用户名<input type="text" v-model="loginForm.username" placeholder="请输入用户名"/>
     <br><br>
-    ���룺 <input type="password" v-model="loginForm.password" placeholder="����������"/>
+    密码<input type="password" v-model="loginForm.password" placeholder="密码"/>
     <br><br>
-    <button v-on:click="login">��¼</button>
+    <button v-on:click="login">登录</button>
   </div>
 </template>
 

@@ -1,8 +1,8 @@
-#GuaCy-Blog
+# GuaCy-Blog
 
 By `Lcy & Zxy`
 
-##Vue
+## Vue
 ```
 vue create xxx
 vue init webpack xxx
@@ -16,3 +16,8 @@ cnpm install axios (安装 axios，用于网络请求)
 cnpm install vuex --save(安装 Vuex，用于管理状态)
 cnpm install vue-router (安装 路由，用于实现两个 Vue 页面的跳转)
 ```
+
+## Git
+$ git add .
+$ git commit -m "XXX"
+$ git push -u origin master

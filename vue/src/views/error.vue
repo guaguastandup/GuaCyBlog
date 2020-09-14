@@ -1,15 +1,10 @@
 <template>
   <div>
-    <h1>��¼����{{msg}}</h1>
+    <h1>{{msg}}</h1>
   </div>
 </template>
 <script>
 export default {
-  // data() {
-  //   return {
-  //     msg: this.$route.query.data
-  //   };
-  // }, //ʹ�����ַ�ʽҲ������ʾ msg
   data() {
     return {
       msg: null

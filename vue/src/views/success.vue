@@ -10,13 +10,5 @@ export default {
       msg: this.$route.query.data
     };
   },
-//   data() { //���ַ�ʽҲ����
-//     return {
-//       msg: null
-//     };
-//   },
-  // created() {
-  //   this.msg = this.$route.query.data;
-  // }
 }
 </script>

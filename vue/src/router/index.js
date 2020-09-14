@@ -15,7 +15,7 @@ export const constantRouterMap = [
 ]
 
 export default new VueRouter({
-    // mode: 'history', //后端支持可开
+    mode: 'history', //后端支持可开
     scrollBehavior: () => ({ y: 0 }),
     routes: constantRouterMap //指定路由列表
 })
