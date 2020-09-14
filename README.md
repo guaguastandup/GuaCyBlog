@@ -18,6 +18,8 @@ cnpm install vue-router (安装 路由，用于实现两个 Vue 页面的跳转)
 ```
 
 ## Git
+```
 $ git add .
 $ git commit -m "XXX"
 $ git push -u origin master
+```
